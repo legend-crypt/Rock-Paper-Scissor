@@ -1,0 +1,100 @@
+body {
+  background: url("chuck-fortner.jpg");
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+.score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.score h2 {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 3rem;
+}
+
+.score-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.score-item p {
+  font-size: 2rem;
+}
+
+.container-selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+
+.container-selector .player-div {
+  border: 2px solid red;
+  width: 50%;
+}
+
+.container-selector .player-div h3 {
+  color: #bae7eb;
+}
+
+.container-selector .player-div-items {
+  border: 2px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container-selector .computer-div {
+  border: 2px solid red;
+  width: 50%;
+}
+
+.container-selector .computer-div h3 {
+  color: #bae7eb;
+}
+
+.container-selector .computer-div-items {
+  border: 2px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+button {
+  width: 5.3rem;
+  padding: 0.5rem;
+  background: #ddb1ee;
+  border: 0;
+  font-size: 1.2rem;
+}
+
+button:hover {
+  background: #5ce986;
+}
+/*# sourceMappingURL=rockpaperscissor.css.map */

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rockpaperscissor.css">
+    <title>Document</title>
+</head>
+<body>
+  <!--<marquee><h1>Welcome to the game</h1></marquee> -->
+    <div class="score">
+        <h2>Score Sheet</h2>
+        <div class="score-item">
+            <p>Player 1 score:<span id="player-score">0</span></p>
+            <p>Computer 1 score:<span id="computer-score">0</span></p>
+        </div>
+    </div>
+
+    
+    <div class="container-selector">
+        <div class="player-div">
+            <h3>Player Selection</h3>
+            <div id="player-selection-div">
+                <button class="player-selection-btn">Paper</button>
+                <button class="player-selection-btn">Rock</button>
+                <button class="player-selection-btn">Scissors</button>
+            </div>
+        </div>
+
+        <div class="computer-div">
+            <h3>Computer Selection</h3>
+            <div id="computer-selection-div">
+                <button class ="cpu-selection-btn">Paper</button>
+                <button class ="cpu-selection-btn">Rock</button>
+                <button class ="cpu-selection-btn">Scissors</button>
+            </div>
+        </div>
+    </div>
+    <script src="rockpaper.js"></script> 
+</body>
+</html>

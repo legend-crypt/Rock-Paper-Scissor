@@ -1,0 +1,75 @@
+body{
+    background: url('chuck-fortner.jpg');
+}
+h1{
+    font-size: 3rem;
+}
+.score{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-left: auto;
+    margin-right:auto;
+
+    h2{
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 3rem;
+    }
+}
+.score-item{
+    display: flex;
+    justify-content: space-between;
+
+    p{
+        font-size: 2rem;
+    }
+}
+
+
+.container-selector{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    
+    .player-div{
+        border: 2px solid red;
+        width: 50%;
+
+        h3{
+            color: rgb(186, 231, 235);
+        }
+
+        &-items{
+            border: 2px solid red;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    .computer-div{
+        border: 2px solid red;
+        width: 50%;
+
+        h3{
+            color: rgb(186, 231, 235);
+        }
+
+        &-items{
+            border: 2px solid red;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+
+button{
+    width: 5.3rem;
+    padding: 0.5rem;
+    background: rgb(221, 177, 238);
+    border: 0;
+    font-size: 1.2rem;
+}
+button:hover{
+    background: rgb(92, 233, 134);
+}
