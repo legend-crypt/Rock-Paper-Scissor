@@ -1,72 +1,96 @@
 let computerPoints = 0;
 let playerPoints = 0;
+let computerSelectionBtn = document.querySelectorAll(".player-selection-btn");
+let playerSelectionBtn = document.querySelectorAll(".player-selection-btn");
+let roundWinner = document.querySelector("#round-winner");
+let playerScore = document.querySelector("#player-score");
+let computerScore = document.querySelector("#computer-score");
+let winner = document.querySelector("#winner");
+let card = document.querySelector(".card");
+let btnPlay = document.querySelector(".btn-play");
+let btnExit = document.querySelector(".btn-exit");
+
+console.log(computerSelectionBtn);
+console.log(playerSelectionBtn);
+function displayCard(){
+    card.style.display = "block";
+    btnPlay.addEventListener("click",function(){
+        location.reload();
+    })
+    btnExit.addEventListener("click",function(){
+        window.open();
+        window.close();
+
+    })
+}
+
 function computerPlay(){
     let randNum = Math.floor(Math.random() * 3);
     if(randNum == 1){
-        return "Rock"
+        return computerSelectionBtn[1].value
     }
     else if(randNum == 2){
-        return "Paper"
+        return computerSelectionBtn[0].value
     }
     else{
-        return "Scissors"
+        return computerSelectionBtn[2].value
     }
 }
-console.log(computerPlay())
-
+console.log(computerPlay());
 function playRounds(playerSelection, computerSelection){
- if(playerSelection =="Rock" && computerSelection == "Paper"){
-     return"computer wins paper beats rock"
+ if(playerSelection == "Rock" && computerSelection == "Paper"){
+      roundWinner.textContent = "computer wins paper beats rock"
+      computerScore.textContent = ++computerPoints 
  }
  else if(computerSelection =="Rock" && playerSelection == "Paper"){
-    return"player1 wins paper beats rock"
+    roundWinner.textContent = "player1 wins paper beats rock"
+    playerScore.textContent = ++playerPoints
 }
 else if(computerSelection =="Scissors" && playerSelection == "Rock"){
-    return "Player1 wins rocks crush scissors"
+    roundWinner.textContent = "Player1 wins rocks crush scissors"
+    playerScore.textContent = ++playerPoints 
 }
 else if(playerSelection =="Scissors" && computerSelection == "Rock"){
-    return "computer wins rock beats scissors"
+    roundWinner.textContent = "computer wins rock beats scissors"
+    computerScore.textContent = ++computerPoints 
 }
 else if(computerSelection =="Scissor" && playerSelection == "Paper"){
-    return "computer wins Scissor cuts paper"
+    roundWinner.textContent = "computer wins Scissor cuts paper"
+    computerScore.textContent = ++computerPoints 
 }
 else if(playerSelection =="Scissor" && computerSelection == "Paper"){
-    return "player1 wins Scissor cuts paper"
+    roundWinner.textContent = "player1 wins Scissor cuts paper"
+    computerScore.textContent = ++playerPoints 
 }
-else if(playerSelection == computerSelection){
-    return "Ties"
+ else{
+     roundWinner.innerHTML ="Ties"
+ }
 }
 
-}
 
 
-for(let i = 1; i <=5; i++) {
-    playerSelection = prompt("Please select one Rock, Paper, or Scissors")
-    computerSelection = computerPlay()
-    console.log(playRounds(playerSelection, computerSelection))
-    function gamePlay() {
-        if(playerSelection =="Rock" && computerSelection == "Paper" || playerSelection =="Scissors" && computerSelection == "Rock" || computerSelection =="Scissor" && playerSelection == "Paper")
-         {
-            computerPoints += 1;
-        }
-      else if (computerSelection =="Rock" && playerSelection == "Paper" || computerSelection =="Scissors" && playerSelection == "Rock" || playerSelection =="Scissor" && computerSelection == "Paper"){
-            playerPoints += 1;
-      }
-      else{
-          playerPoints += 0;
-          computerPoints += 0;
-      }
+function checkWinner(){
+    if ((computerPoints > playerPoints) && (computerPoints == 5)){
+        winner.textContent = "computer wins"
+        displayCard()
     }
-    gamePlay()
+    else if((playerPoints > computerPoints) &&(playerPoints == 5)){
+        winner.textContent = "computer losses"
+        displayCard()
+    }
 }
-    console.log(`player points is ${playerPoints} points`)
-    console.log(`Computer points is ${computerPoints} points`)
-if (computerPoints > playerPoints){
-    console.log("computer wins")
+
+playerSelectionBtn.forEach(button => {
+    button.addEventListener('click',getPlayerSelection)
+});
+
+function getPlayerSelection(e){
+        let playerSelection = (e.currentTarget.value);
+        let computerSelection = computerPlay();
+        playRounds(playerSelection, computerSelection);
+        checkWinner();
+    
 }
-else if(playerPoints > computerPoints){
-    console.log("computer losses")
-}
-else{
-    console.log("Its a tie play again")
-}
+
+   
+

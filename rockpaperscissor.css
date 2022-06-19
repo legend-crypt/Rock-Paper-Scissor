@@ -2,6 +2,56 @@ body {
   background: url("chuck-fortner.jpg");
 }
 
+.container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card {
+  width: 28rem;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.548), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.548), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(129, 129, 129, 0.281);
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  top: 40%;
+  right: 40%;
+  left: 30%;
+  z-index: 1000;
+  display: none;
+}
+
+.card-header {
+  background: #a26ce0;
+  color: white;
+  padding: 0.8;
+  font-size: 2.1rem;
+}
+
+.card-footer {
+  padding: 0.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.card-footer button {
+  width: 8rem;
+  border: 1px solid #da1111;
+  background-color: #ec8888;
+}
+
+.card-footer .btn-exit:hover {
+  background: red;
+}
+
 h1 {
   font-size: 3rem;
 }
@@ -42,14 +92,16 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container-selector .player-div {
-  border: 2px solid red;
   width: 50%;
 }
 
@@ -58,7 +110,6 @@ h1 {
 }
 
 .container-selector .player-div-items {
-  border: 2px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +119,6 @@ h1 {
 }
 
 .container-selector .computer-div {
-  border: 2px solid red;
   width: 50%;
 }
 
@@ -77,7 +127,6 @@ h1 {
 }
 
 .container-selector .computer-div-items {
-  border: 2px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,13 +137,19 @@ h1 {
 
 button {
   width: 5.3rem;
-  padding: 0.5rem;
+  padding: 0.3rem auto 0.3rem auto;
   background: #ddb1ee;
   border: 0;
+  border-radius: 25px;
   font-size: 1.2rem;
 }
 
 button:hover {
   background: #5ce986;
+}
+
+#round-winner {
+  font-size: 1.2rem;
+  color: white;
 }
 /*# sourceMappingURL=rockpaperscissor.css.map */
