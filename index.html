@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="rockpaperscissor.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+  <!--<marquee><h1>Welcome to the game</h1></marquee> -->
+  <div class="card">
+    <div class="card-header">
+        <h1 id="winner">Het</h1>
+    </div>
+    <div class="card-footer">
+        <button class="btn-play">Play~Again</button>
+        <button class="btn-exit">Exit</button>
+    </div>
+  </div>
+    <div class="score">
+        <h2>Score Sheet</h2>
+        <div class="score-item">
+            <p>Player score:<span id="player-score"></span></p>
+            <p>Computer score:<span id="computer-score"></span></p>
+        </div>
+    </div>
+
+    
+    <div class="container-selector">
+        <div class="player-div">
+            <h3>Player Selection</h3>
+            <div id="player-selection-div">
+                <button class="player-selection-btn" value="Paper">Paper</button>
+                <button class="player-selection-btn" value="Rock">Rock</button>
+                <button class="player-selection-btn" value="Scissors">Scissors</button>
+            </div>
+        </div>
+
+        <div class="computer-div">
+            <h3>Computer Selection</h3>
+            <div id="computer-selection-div">
+                <button class ="cpu-selection-btn" value="Paper">Paper</button>
+                <button class ="cpu-selection-btn" value="Rock">Rock</button>
+                <button class ="cpu-selection-btn" value="Scissors">Scissors</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <p id="round-winner"></p>
+    </div>
+    </div>
+    <script src="rockpaper.js"></script> 
+</body>
+</html>
