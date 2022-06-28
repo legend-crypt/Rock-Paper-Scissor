@@ -72,10 +72,16 @@ else if(playerSelection =="Scissor" && computerSelection == "Paper"){
 function checkWinner(){
     if ((computerPoints > playerPoints) && (computerPoints == 5)){
         winner.textContent = "computer wins"
+        playerSelectionBtn.forEach(button => {
+            button.disabled = true;
+        })
         displayCard()
     }
     else if((playerPoints > computerPoints) &&(playerPoints == 5)){
         winner.textContent = "computer losses"
+        playerSelectionBtn.forEach(button => {
+            button.disabled = true;
+        })
         displayCard()
     }
 }
